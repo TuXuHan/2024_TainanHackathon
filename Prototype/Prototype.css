@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="range"] {
+    margin: 0 10px;
+    width: 300px;
+}
