@@ -9,3 +9,35 @@
 - 使用者友善介面：整合後端 API 與前端技術，提供流暢的店家搜尋與選擇體驗
 
 此專案適用於「審核人員」與「一般使用者」，讓查找台南市特色店家變得更加直覺與高效
+
+## 目錄結構
+```
+2024_TainanHackathon
+│── __pycache__/
+│── Client/
+│── ProjectFiles/
+│   │── index.html
+│   │── map.html
+│   │── user.css
+│   │── user.js
+│── Prototype/
+│   │── Database.js
+│   │── index.html
+│   │── Prototype.css
+│   │── Prototype.js
+│── Review-all/
+│   │── Database.js
+│   │── index.html
+│   │── Review.css
+│   │── Review.js
+│── chromedriver
+│── CrawlerTest.py
+│── draft.pages
+│── main.py
+│── map.html
+│── MapCrawler.py
+│── ReviewsCrawler.py
+│── Threading.py
+│── TopicsCrawler.py
+│── user.py
+```
