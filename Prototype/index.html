@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Prototype.css">
+    <title>主題地圖</title>
+</head>
+<body>
+    <div class="search-container">
+        <h1>主題美食搜尋</h1>
+        <input id="searchword" type="text" placeholder="輸入想搜尋的地點或主題" />
+        <button id="searchbtn">搜尋</button>
+    </div>
+
+    <div class="main-content">
+        <div class="left-panel">
+            <div class="filter-box">
+                <!--
+                <div class="filter-title">距離</div>
+                <div class="slider-container">
+                    <input type="range" id="distanceslider" min="0" max="40" value="20">
+                    <span id="distancevalue">20 km</span>
+                </div>
+                -->
+                <div class="filter-title">搜尋店家數</div>
+                <div class="slider-container">
+                    <input type="range" id="numslider" min="0" max="50" value="20">
+                    <span id="numvalue">20 家</span>
+                </div>
+                <!--
+                <div class="filter-title">評論時長</div>
+                <div class="slider-container">
+                    <input type="range" id="reviewslider" min="1" max="4" value="2">
+                    <span id="reviewvalue">2 年</span>
+                </div>
+                -->
+            </div>
+
+            <!--
+            <div class="filter-box">
+                <div class="filter-title-star">
+                    <span class="filter-title">星等</span>
+                    <div class="star-rating" id="starRating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+            </div>
+            -->
+
+            <div class="filter-box-type2">
+                <div class="filter-title">區域</div>
+                <div class="filter-options" id="regionOptions">
+                    <label><input type="checkbox" value="中西區"> 中西區</label>
+                    <label><input type="checkbox" value="東區"> 東區</label>
+                    <label><input type="checkbox" value="北區"> 北區</label>
+                    <label><input type="checkbox" value="南區"> 南區</label>
+                    <label><input type="checkbox" value="永康區"> 永康區</label>
+                    <label><input type="checkbox" value="安平區"> 安平區</label>
+                </div>
+                <button id="moreRegionsBtn" class="view-more-button">查看更多</button>
+                <div class="filter-options hidden" id="moreRegions">
+                    <label><input type="checkbox" value="新營"> 新營區</label>
+                    <label><input type="checkbox" value="鹽水"> 鹽水區</label>
+                    <label><input type="checkbox" value="白河"> 白河區</label>
+                    <label><input type="checkbox" value="柳營"> 柳營區</label>
+                    <label><input type="checkbox" value="後壁"> 後壁區</label>
+                    <label><input type="checkbox" value="東山"> 東山區</label>
+                    <label><input type="checkbox" value="麻豆"> 麻豆區</label>
+                    <label><input type="checkbox" value="下營"> 下營區</label>
+                    <label><input type="checkbox" value="六甲"> 六甲區</label>
+                    <label><input type="checkbox" value="官田"> 官田區</label>
+                    <label><input type="checkbox" value="大內"> 大內區</label>
+                    <label><input type="checkbox" value="佳里"> 佳里區</label>
+                    <label><input type="checkbox" value="學甲"> 學甲區</label>
+                    <label><input type="checkbox" value="西港"> 西港區</label>
+                    <label><input type="checkbox" value="七股"> 七股區</label>
+                    <label><input type="checkbox" value="將軍"> 將軍區</label>
+                    <label><input type="checkbox" value="北門"> 北門區</label>
+                    <label><input type="checkbox" value="新化"> 新化區</label>
+                    <label><input type="checkbox" value="新市"> 新市區</label>
+                    <label><input type="checkbox" value="善化"> 善化區</label>
+                    <label><input type="checkbox" value="安定"> 安定區</label>
+                    <label><input type="checkbox" value="山上"> 山上區</label>
+                    <label><input type="checkbox" value="玉井"> 玉井區</label>
+                    <label><input type="checkbox" value="楠西"> 楠西區</label>
+                    <label><input type="checkbox" value="南化"> 南化區</label>
+                    <label><input type="checkbox" value="左鎮"> 左鎮區</label>
+                    <label><input type="checkbox" value="仁德"> 仁德區</label>
+                    <label><input type="checkbox" value="歸仁"> 歸仁區</label>
+                    <label><input type="checkbox" value="關廟"> 關廟區</label>
+                    <label><input type="checkbox" value="龍崎"> 龍崎區</label>
+                    <label><input type="checkbox" value="安南"> 安南區</label>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <div class="filter-title">類型</div>
+                <div class="filter-options">
+                    <label><input type="checkbox"> 舒適</label>
+                    <label><input type="checkbox"> 貓</label>
+                    <label><input type="checkbox"> 司康</label>
+                    <label><input type="checkbox"> 戚風蛋糕</label>
+                    <label><input type="checkbox"> 提拉米蘇</label>
+                    <label><input type="checkbox"> 檸檬塔</label>
+                </div>
+            </div>
+
+            <a href="http://localhost:8000/Review-all/" target="_blank">
+                <button class="see-all-btn">查看全部</button>
+            </a>
+
+        </div>
+
+        <div class="right-panel">
+            <div id="result">
+                <div class="result-title">
+                    <h2>搜尋結果：</h2>
+                </div>
+            </div>
+                <!-- 搜尋結果將顯示在這裡 -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="Prototype.js"></script>
+    <script type="module" src="Database.js"></script>
+<!--<script src="https://unpkg.com/@supabase/supabase-js"></script>-->    
+</body>
+</html>
